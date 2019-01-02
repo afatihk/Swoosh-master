@@ -43,22 +43,24 @@
         <ToggleButton
                 android:text="Mens"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton3"
+                android:layout_height="wrap_content" android:id="@+id/MensButton"
                 android:textColor="@color/colorAccent" android:background="@drawable/toggle_swoosh"
-                android:textOff="Mens" android:textOn="Mens" android:fontFamily="@font/montserrat"/>
+                android:textOff="Mens" android:textOn="Mens" android:fontFamily="@font/montserrat"
+                android:onClick="mensClicked"/>
         <ToggleButton
                 android:text="womans"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton2"
+                android:layout_height="wrap_content" android:id="@+id/WomansButton"
                 android:textColor="@color/colorAccent" android:background="@drawable/toggle_swoosh"
                 android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:textOff="womans"
-                android:textOn="womans" android:fontFamily="@font/montserrat"/>
+                android:textOn="womans" android:fontFamily="@font/montserrat" android:onClick="womansClicked"/>
         <ToggleButton
                 android:text="co-ed"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton"
+                android:layout_height="wrap_content" android:id="@+id/Co-edButton"
                 android:textColor="@color/colorAccent" android:background="@drawable/toggle_swoosh"
-                android:textOff="co-ed" android:textOn="co-ed" android:fontFamily="@font/montserrat"/>
+                android:textOff="co-ed" android:textOn="co-ed" android:fontFamily="@font/montserrat"
+                android:onClick="coEdClicked"/>
     </LinearLayout>
     <Button
             android:text="next"
