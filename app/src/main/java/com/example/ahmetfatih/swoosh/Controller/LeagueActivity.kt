@@ -1,10 +1,11 @@
-package com.example.ahmetfatih.swoosh
+package com.example.ahmetfatih.swoosh.Controller
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
 import android.widget.Toast
+import com.example.ahmetfatih.swoosh.Controller.Utilities.Bilgiiki
+import com.example.ahmetfatih.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -38,7 +39,7 @@ class LeagueActivity : BaseActivity() {
     fun nextClicked(view : View){
         if (selectedLeague != "") {
             val skillsIntent = Intent(this, SkillsActivity::class.java)
-            skillsIntent.putExtra("lig", selectedLeague)
+            skillsIntent.putExtra(Bilgiiki, selectedLeague)
             startActivity(skillsIntent)
         }else{
             Toast.makeText(applicationContext,"Please Select League", Toast.LENGTH_LONG).show()
