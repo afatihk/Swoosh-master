@@ -12,7 +12,12 @@ import kotlinx.android.synthetic.main.activity_skills.*
 class SkillsActivity : BaseActivity() {
 
     var player = Oyuncu("","")
-    var gelenler = ""
+
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +25,13 @@ class SkillsActivity : BaseActivity() {
         player = intent.getParcelableExtra(EXTRA_PLAYER)
 
         ben.text = "I am a :${player.lig}"
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null){
+            player = savedInstanceState.getParcelable(EXTRA_PLAYER)
+        }
     }
 
     fun onFinishClicked(view: View){
